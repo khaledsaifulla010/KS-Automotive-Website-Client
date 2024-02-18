@@ -13,7 +13,7 @@ const Services = () => {
             <div className='m-8 flex items-center justify-around '>
                 <div className="card  w-[350px] h-[400px] border-4">
                     <figure className="px-10 pt-10">
-                        <img src={sellsCars} alt="" className="rounded-xl  w-[160px] shadow" />
+                        <img src={sellsCars} alt="" className="rounded-xl  w-[150px] " />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title font-bold text-xl">Sells Cars</h2>
@@ -23,17 +23,17 @@ const Services = () => {
                 </div>
                 <div className="card  w-[350px]  h-[400px] border-4">
                     <figure className="px-10 pt-10">
-                        <img src={carsSecurity} alt="" className="rounded-xl  w-[160px]" />
+                        <img src={carsSecurity} alt="" className="rounded-xl  w-[150px]" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title font-bold text-xl -mt-6">Cars Security</h2>
+                        <h2 className="card-title font-bold text-xl -mt-4">Cars Security</h2>
                         <p className='text-justify'>Protect your vehicle with our advanced security services, including GPS tracking, alarm systems, and 24/7 monitoring for ultimate peace of mind.</p>
 
                     </div>
                 </div>
                 <div className="card  w-[350px]  h-[400px] border-4">
                     <figure className="px-10 pt-10">
-                        <img src={carRepairing} alt="" className="rounded-xl  w-[160px]" />
+                        <img src={carRepairing} alt="" className="rounded-xl  w-[150px]" />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title font-bold text-xl ">Cars Repairing</h2>
@@ -43,7 +43,7 @@ const Services = () => {
                 </div>
                 <div className="card  w-[350px]  h-[400px] border-4">
                     <figure className="px-10 pt-10">
-                        <img src={carConsultancy} alt="" className="rounded-xl  w-[160px]" />
+                        <img src={carConsultancy} alt="" className="rounded-xl  w-[150px]" />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title font-bold text-xl">Cars Consultancy</h2>
