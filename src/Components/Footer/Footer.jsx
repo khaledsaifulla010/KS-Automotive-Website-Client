@@ -6,7 +6,7 @@ const Footer = () => {
                 <div className='flex items-center justify-between gap-64'>
                     <div>
                         <img className='lg:w-16 rounded-xl lg:h-10' src={companyLogo} alt="" />
-                        <p className='font-bold mt-2'>KS AUTOMOTIVE LIMITED <br />Providing Reliable Automotive Services Since 2024 <br />@All Rights Reserved by KS AUTOMOTIVE LIMITED</p>
+                        <p className='font-bold mt-4'>KS AUTOMOTIVE LIMITED <br />Providing Reliable Automotive Services Since 2024 <br />@All Rights Reserved by KS AUTOMOTIVE LIMITED</p>
                     </div>
                     <div>
                         <nav className='grid'>
