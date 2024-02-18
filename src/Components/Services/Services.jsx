@@ -10,8 +10,8 @@ const Services = () => {
             <div>
                 <h1 className='text-5xl font-bold text-center mt-16 mb-8'>Our Services</h1>
             </div>
-            <div className='m-8 flex items-center justify-around '>
-                <div className="card  w-[350px] h-[400px] border-4">
+            <div className='m-8 flex items-center justify-around text-white'>
+                <div className="card  w-[350px] h-[400px] border-4 bg-slate-400 ">
                     <figure className="px-10 pt-10">
                         <img src={sellsCars} alt="" className="rounded-xl  w-[150px] " />
                     </figure>
@@ -21,7 +21,7 @@ const Services = () => {
 
                     </div>
                 </div>
-                <div className="card  w-[350px]  h-[400px] border-4">
+                <div className="card  w-[350px]  h-[400px] border-4 bg-slate-400">
                     <figure className="px-10 pt-10">
                         <img src={carsSecurity} alt="" className="rounded-xl  w-[150px]" />
                     </figure>
@@ -31,7 +31,7 @@ const Services = () => {
 
                     </div>
                 </div>
-                <div className="card  w-[350px]  h-[400px] border-4">
+                <div className="card  w-[350px]  h-[400px] border-4 bg-slate-400">
                     <figure className="px-10 pt-10">
                         <img src={carRepairing} alt="" className="rounded-xl  w-[150px]" />
                     </figure>
@@ -41,7 +41,7 @@ const Services = () => {
 
                     </div>
                 </div>
-                <div className="card  w-[350px]  h-[400px] border-4">
+                <div className="card  w-[350px]  h-[400px] border-4 bg-slate-400">
                     <figure className="px-10 pt-10">
                         <img src={carConsultancy} alt="" className="rounded-xl  w-[150px]" />
                     </figure>

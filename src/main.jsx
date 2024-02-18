@@ -18,24 +18,25 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root></Root>,
     children:
-    [
-      {
-        path:'/',
-        element: <Home></Home>
-      },
-      {
-        path:'addProduct',
-        element:<AddProduct></AddProduct>
-      },
-      {
-        path:'myCart',
-        element:<MyCart></MyCart>
-      },
-      {
-        path:'logIn',
-        element: <Login></Login>
-      }
-    ]
+      [
+        {
+          path: '/',
+          element: <Home></Home>,
+          loader: () => fetch('http://localhost:5000/Brands')
+        },
+        {
+          path: 'addProduct',
+          element: <AddProduct></AddProduct>
+        },
+        {
+          path: 'myCart',
+          element: <MyCart></MyCart>
+        },
+        {
+          path: 'logIn',
+          element: <Login></Login>
+        }
+      ]
   },
 ]);
 
