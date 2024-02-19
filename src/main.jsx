@@ -12,6 +12,8 @@ import Root from './Components/Root/Root';
 import AddProduct from './Components/AddProduct/AddProduct';
 import MyCart from './Components/MyCart/MyCart';
 import Login from './Components/Login/Login';
+import CarList from './Components/AllCars/CarList/CarList';
+
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,11 @@ const router = createBrowserRouter([
         {
           path: 'logIn',
           element: <Login></Login>
+        },
+        {
+          path: 'carList/:name',
+          element: <CarList></CarList>,
+          
         }
       ]
   },

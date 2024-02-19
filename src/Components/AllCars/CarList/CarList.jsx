@@ -1,0 +1,32 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import CartCard from "../../CarCard/CartCard";
+
+
+
+const CarList = () => {
+
+    const [brandCars, setBrandCars] = useState([])
+
+    const { name } = useParams()
+    console.log(name)
+    useEffect(() => {
+        fetch(`http://localhost:5000/AllCars/${name}`)
+            .then(res => res.json())
+            .then(data => setBrandCars(data))
+
+    }, [name])
+    console.log(brandCars)
+
+    return (
+        <div>
+            {
+                brandCars.length > 0 &&
+                brandCars.map(brandCar => <CartCard key={brandCar._id} brandCar={brandCar} ></CartCard>)
+            }
+
+        </div>
+    );
+};
+
+export default CarList;
