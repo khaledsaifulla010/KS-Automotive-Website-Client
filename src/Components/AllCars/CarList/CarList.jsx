@@ -19,7 +19,7 @@ const CarList = () => {
     console.log(brandCars)
 
     return (
-        <div>
+        <div className="grid grid-cols-2 ml-24 mt-16   gap-x-10 gap-y-12 ">
             {
                 brandCars.length > 0 &&
                 brandCars.map(brandCar => <CartCard key={brandCar._id} brandCar={brandCar} ></CartCard>)
