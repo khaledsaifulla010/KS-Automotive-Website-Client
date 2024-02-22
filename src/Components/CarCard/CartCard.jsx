@@ -7,7 +7,7 @@ const CartCard = ({ brandCar }) => {
     return (
         <div>
             <div>
-                <div className="card card-compact w-[600px] h-[490px] p-6 border-2 bg-gradient-to-r from-indigo-400 from-7% via-sky-400 via-30% to-emerald-400 to-80%">
+                <div className="card card-compact w-[600px] h-[520px] p-6 border-2 bg-gradient-to-r from-indigo-400 from-7% via-sky-400 via-30% to-emerald-400 to-80%">
                     <figure><img src={img} alt="" /></figure>
                     <div className="card-body">
                         <h2 className=" border-2 w-[400px] ml-12 mt-2 p-2 rounded-lg bg-rose-400 text-white text-center font-bold text-lg">{model}</h2>
