@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import { FaDollarSign } from "react-icons/fa";
 import { FcRating } from "react-icons/fc";
 
+
 const CartCard = ({ brandCar }) => {
-    const { img, model, price, rating } = brandCar;
+    const {_id, img, model, price, rating } = brandCar;
+    
     return (
         <div>
             <div>
-                <div className="card card-compact w-[600px] h-[520px] p-6 border-2 bg-gradient-to-r from-indigo-400 from-7% via-sky-400 via-30% to-emerald-400 to-80%">
+                <div className="card card-compact w-[600px] h-[520px] p-6 border-2 bg-slate-400">
                     <figure><img src={img} alt="" /></figure>
                     <div className="card-body">
                         <h2 className=" border-2 w-[400px] ml-12 mt-2 p-2 rounded-lg bg-rose-400 text-white text-center font-bold text-lg">{model}</h2>
@@ -27,7 +29,7 @@ const CartCard = ({ brandCar }) => {
 
 
                         <div className="flex items-center justify-between mt-8 ">
-                            <Link>
+                            <Link to={`/carDetail/${_id}`}>
                                 <button className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-bold text-xl text-white p-2 w-48">Details</button>
                             </Link>
                             <Link>

@@ -14,6 +14,8 @@ import MyCart from './Components/MyCart/MyCart';
 import Login from './Components/Login/Login';
 import CarList from './Components/AllCars/CarList/CarList';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
+import CarDetails from './Components/CarDetails/CarDetails';
+
 
 
 const router = createBrowserRouter([
@@ -44,6 +46,11 @@ const router = createBrowserRouter([
           path: 'carList/:name',
           element: <CarList></CarList>,
 
+        },
+        {
+          path:'carDetail/:id',
+          element: <CarDetails></CarDetails>,
+          loader:({params})=>fetch(`http://localhost:5000/AllCar/${params.id}`)
         }
       ]
   },
