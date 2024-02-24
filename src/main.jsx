@@ -13,12 +13,14 @@ import AddProduct from './Components/AddProduct/AddProduct';
 import MyCart from './Components/MyCart/MyCart';
 import Login from './Components/Login/Login';
 import CarList from './Components/AllCars/CarList/CarList';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:
       [
         {
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
         {
           path: 'carList/:name',
           element: <CarList></CarList>,
-          
+
         }
       ]
   },
