@@ -15,6 +15,7 @@ import Login from './Components/Login/Login';
 import CarList from './Components/AllCars/CarList/CarList';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import CarDetails from './Components/CarDetails/CarDetails';
+import Register from './Components/Register/Register';
 
 
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         {
           path: 'logIn',
           element: <Login></Login>
+        },
+        {
+          path: 'register',
+          element: <Register></Register>
         },
         {
           path: 'carList/:name',

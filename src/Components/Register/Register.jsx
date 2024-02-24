@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
-import google from '../../assets/image/2.Google.png'
-const Login = () => {
+import { Link } from "react-router-dom";
+
+const Register = () => {
     return (
         <div>
-            <h2 className="text-5xl font-bold text-center">Please Login</h2>
+            <h2 className="text-5xl font-bold text-center">Please Register</h2>
             <div>
                 <div className="hero mt-4">
                     <div className="hero-content flex-col lg:flex-row-reverse">
@@ -21,18 +21,15 @@ const Login = () => {
                                         <span className=" text-lg">Password</span>
                                     </label>
                                     <input type="password" placeholder="Enter Your password" className="input input-bordered" required />
-                                    <label className="label font-bold underline ml-64 mt-1 text-lg ">
-                                        <Link to={'/register'}>Register</Link>
+                                    <label className="label font-bold underline ml-[275px] mt-1 text-lg">
+                                        <Link to={'/login'}>Login</Link>
                                     </label>
                                 </div>
                                 <div className="form-control mt-4">
-                                    <button className="btn bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg">Login</button>
+                                    <button className="btn bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold text-lg">Register</button>
                                 </div>
 
                             </form>
-                            <div className="w-10 ml-8 mb-2">
-                                <button><img src={google} alt="" /></button>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -41,4 +38,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
