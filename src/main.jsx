@@ -16,6 +16,9 @@ import CarList from './Components/AllCars/CarList/CarList';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import CarDetails from './Components/CarDetails/CarDetails';
 import Register from './Components/Register/Register';
+import AuthProvider from './Components/Firebase/AuthProvider/AuthProvider';
+import PrivateRoute from './Components/Firebase/PrivateRoute/PrivateRoute';
+
 
 
 
@@ -33,12 +36,16 @@ const router = createBrowserRouter([
         },
         {
           path: 'addProduct',
-          element: <AddProduct></AddProduct>
+          element: (<PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>)
         },
         {
           path: 'myCart',
-          element: <MyCart></MyCart>,
-          loader: ()=> fetch('http://localhost:5000/MyCart')
+          element: (<PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>),
+          loader: () => fetch('http://localhost:5000/MyCart')
         },
         {
           path: 'logIn',
@@ -50,13 +57,17 @@ const router = createBrowserRouter([
         },
         {
           path: 'carList/:name',
-          element: <CarList></CarList>,
+          element: (<PrivateRoute>
+            <CarList></CarList>
+          </PrivateRoute>)
 
         },
         {
-          path:'carDetail/:id',
-          element: <CarDetails></CarDetails>,
-          loader:({params})=>fetch(`http://localhost:5000/AllCar/${params.id}`)
+          path: 'carDetail/:id',
+          element: (<PrivateRoute>
+            <CarDetails></CarDetails>
+          </PrivateRoute>),
+          loader: ({ params }) => fetch(`http://localhost:5000/AllCar/${params.id}`)
         }
       ]
   },
@@ -64,6 +75,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+
+      <RouterProvider router={router} />
+    </AuthProvider>
+
   </React.StrictMode>,
 )
