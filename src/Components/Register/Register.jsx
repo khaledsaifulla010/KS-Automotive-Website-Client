@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword, } from "firebase/auth";
 import auth from "../Firebase/firebaseConfig";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 const Register = () => {
     const handleRegister = (e) => {
         e.preventDefault();
