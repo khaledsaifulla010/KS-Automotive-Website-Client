@@ -11,7 +11,7 @@ const CarList = () => {
     const { name } = useParams()
     console.log(name)
     useEffect(() => {
-        fetch(`http://localhost:5000/AllCars/${name}`)
+        fetch(`https://2-ks-automotive-website-server.vercel.app/AllCars/${name}`)
             .then(res => res.json())
             .then(data => setBrandCars(data))
 

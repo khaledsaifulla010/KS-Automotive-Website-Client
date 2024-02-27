@@ -7,7 +7,7 @@ const CarDetails = () => {
     const { img, model, descriptions } = carDetail;
 
     const handleMyCart = () => {
-        fetch('http://localhost:5000/MyCart', {
+        fetch('https://2-ks-automotive-website-server.vercel.app/MyCart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

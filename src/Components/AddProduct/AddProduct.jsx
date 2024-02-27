@@ -18,7 +18,7 @@ const AddProduct = () => {
 
         //send data to the server
 
-        fetch('http://localhost:5000/AddProduct', {
+        fetch('https://2-ks-automotive-website-server.vercel.app/AddProduct', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

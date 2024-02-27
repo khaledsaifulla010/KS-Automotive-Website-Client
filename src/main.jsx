@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         {
           path: '/',
           element: <Home></Home>,
-          loader: () => fetch('http://localhost:5000/Brands')
+          loader: () => fetch('https://2-ks-automotive-website-server.vercel.app/Brands')
         },
         {
           path: 'addProduct',
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
           element: (<PrivateRoute>
             <MyCart></MyCart>
           </PrivateRoute>),
-          loader: () => fetch('http://localhost:5000/MyCart')
+          loader: () => fetch('https://2-ks-automotive-website-server.vercel.app/MyCart')
         },
         {
           path: 'logIn',
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
           element: (<PrivateRoute>
             <CarDetails></CarDetails>
           </PrivateRoute>),
-          loader: ({ params }) => fetch(`http://localhost:5000/AllCar/${params.id}`)
+          loader: ({ params }) => fetch(`https://2-ks-automotive-website-server.vercel.app/AllCar/${params.id}`)
         }
       ]
   },
